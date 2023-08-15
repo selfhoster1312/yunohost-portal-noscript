@@ -1,0 +1,45 @@
+#center {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#login-form {
+	margin: auto;
+	max-width: 200px;
+}
+
+#login-line {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+	font-size: 2rem;
+	text-align: center;
+	height: 2.5rem;
+	gap: 0.5rem;
+}
+
+#login-line > img {
+	width: 1.75rem;
+	height: auto;
+}
+
+#login-line > input {
+	border-color: rgba(31, 41, 55, 0.2);
+	border-radius: 8px;
+	padding: 0.5rem 1rem;
+}
+
+#submit-login {
+	width: 100%;
+	background-color: rgb(87, 13, 248);
+	cursor: pointer;
+	box-sizing: border-box;
+	border: none;
+	color: rgb(240, 240, 240);
+	font-weight: bolder;
+	text-transform: uppercase;
+	margin: auto;
+}

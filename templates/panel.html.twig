@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block main %}
+Welcome {{ user }} !
+<br><a href='/yunohost/portalapi/logout?referer_redirect'>Log out</a><br>
+
+{% if http_user != user %}
+	FastCGI REMOTE_USER and HTTP Remote-User header do not match: {{ user }} vs {{ http_user }}.
+	<br>Here's the list of headers found:
+	{% for key, val in headers %}
+	<br><b>{{ key }}</b>: {{ val }}
+	{% endfor %}
+{% endif %}
+{% endblock %}
