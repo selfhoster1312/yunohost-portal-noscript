@@ -28,7 +28,12 @@
             echo "FastCGI REMOTE_USER and HTTP Remote-User header match.";
         }
     } else {
-        echo "Missing HTTP header: Remote-User";
+        if (array_key_exists("REMOTE_USER", $_SERVER) && $_SERVER["REMOTE_USER"] != "") {
+                echo "Missing HTTP header: Remote-User";
+                foreach($headers as $key => $val) {
+                        echo "<br>$key: $val";
+                }
+        }
     }
 ?>
   </body>
